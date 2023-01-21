@@ -12,7 +12,7 @@ function App() {
   const [user] = useAuthState(auth)
 
   return (
-    <div className="container">
+    <div className="container" style={{width: "100%", padding:"0px", marginTop:"0px"}}>
       <div className="chatwrapper">
         <div className="chatwindow">
           <Header user={user}/>
