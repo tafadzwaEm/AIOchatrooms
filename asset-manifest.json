@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/chatWithEmmanuel/static/css/main.cf1b5477.css",
+    "main.js": "/chatWithEmmanuel/static/js/main.57efb99b.js",
+    "index.html": "/chatWithEmmanuel/index.html",
+    "main.cf1b5477.css.map": "/chatWithEmmanuel/static/css/main.cf1b5477.css.map",
+    "main.57efb99b.js.map": "/chatWithEmmanuel/static/js/main.57efb99b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf1b5477.css",
+    "static/js/main.57efb99b.js"
+  ]
+}
