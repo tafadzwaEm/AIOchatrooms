@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/chatWithEmmanuel/static/css/main.cf1b5477.css",
-    "main.js": "/chatWithEmmanuel/static/js/main.57efb99b.js",
+    "main.css": "/chatWithEmmanuel/static/css/main.9482f98a.css",
+    "main.js": "/chatWithEmmanuel/static/js/main.76310624.js",
     "index.html": "/chatWithEmmanuel/index.html",
-    "main.cf1b5477.css.map": "/chatWithEmmanuel/static/css/main.cf1b5477.css.map",
-    "main.57efb99b.js.map": "/chatWithEmmanuel/static/js/main.57efb99b.js.map"
+    "main.9482f98a.css.map": "/chatWithEmmanuel/static/css/main.9482f98a.css.map",
+    "main.76310624.js.map": "/chatWithEmmanuel/static/js/main.76310624.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf1b5477.css",
-    "static/js/main.57efb99b.js"
+    "static/css/main.9482f98a.css",
+    "static/js/main.76310624.js"
   ]
 }
