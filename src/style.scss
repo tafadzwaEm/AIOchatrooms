@@ -1,0 +1,182 @@
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @mixin tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @mixin laptop {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+
+
+body{
+    background-color: lightblue;
+    .chatwrapper{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .chatwindow{
+            background-color: white;
+            border-radius: 20px;
+            width: 70%;
+            height: 90%;
+            overflow: hidden;
+
+            .header{
+                height: 12%;
+                background-color: rgb(4, 4, 31);
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;  
+                @include mobile {
+                    flex-direction: column;
+                    height: 22%;
+                    justify-content:space-evenly;
+                    gap: 0px;                   
+                }
+                
+                p{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin-top: 20px;
+                    margin-left: 10px;
+                    @include mobile {
+                        margin-top: 5px;
+                        margin-bottom: -8px;
+                    }
+
+                    span{
+                        font-weight: 100;
+                        font-size: 15px;
+                    }
+                } // end of p    
+
+                button{
+                    margin-top: 10px;
+                    margin-right: 10px;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    background-color: beige;
+                    font-weight: bold;
+                    color: rgb(4, 4, 31);
+
+                    @include mobile {
+                        padding: 5px 10px;
+                    }
+                }
+            } // eo header
+
+            .messageswindow{
+                height: 76%;
+                padding: 10px;
+                overflow-y: scroll;
+                background-color: rgba(11, 85, 196, 0.13);
+
+                @include mobile {
+                    height: 68%;                 
+                }
+                .message{
+                    
+                    .received{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+                        align-items:flex-start;
+                        max-width: 80%;
+                        small{
+                            font-weight: bold;
+                            font-size: 14px;
+                            display: block;
+                        }
+    
+                        p{
+                            background-color: rgb(118, 118, 156);
+                            color: white;
+                            padding: 10px;
+                            border-radius: 10px 10px 10px 0px;
+                            display: block;
+
+                            span{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .sent{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+                        align-items:flex-end;
+                        // max-width: 80%;
+                        
+                        small{
+                            font-weight: bold;
+                            font-size: 14px;
+                            display: block;                           
+                        }
+    
+                        p{
+                            background-color: rgb(74, 182, 114);
+                            color: white;
+                            padding: 10px;
+                            border-radius: 10px 10px 0px 10px;
+                            display: block;
+                        }
+                    }
+                }
+            } // end of messages window
+
+            .sendmessagewindow{
+                background-color: rgba(11, 85, 196, 0.13);
+                height: 12%;
+                padding: 10px;
+                color: white;
+
+                @include mobile {
+                    height: 10%;                 
+                }
+
+                form{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    textarea{
+                        flex: 4;
+                        margin-right: 5px;
+                        border: none;
+                        padding: 5px;
+                        border-radius: 10px;
+                        background-color: rgb(255, 255, 255);
+
+                        &::placeholder{
+                            color: rgb(99, 99, 99);
+                            padding-left: 5px;
+                            padding-top: 5px;
+                        }
+                    }
+                    input{
+                        flex:1;
+                        padding: 10px 5px;
+                        background-color: rgb(4, 4, 31);
+                        color: white;
+                        font-weight: bold;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+        } // end of chat window
+    } // end of chat wrapper
+}
