@@ -1,4 +1,4 @@
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
+import { addDoc, collection, serverTimestamp} from 'firebase/firestore'
 import React, { useState } from 'react'
 import { auth, db } from '../firebase-config'
 
@@ -9,7 +9,7 @@ const Sendmessage = ({room}) => {
   const sendmessage = async (e) => {
       e.preventDefault()
 
-      if(userMessage == ''){
+      if(userMessage === ''){
         alert('Cannot send an empty message')
         return
       }
@@ -18,6 +18,7 @@ const Sendmessage = ({room}) => {
       await addDoc(collection(db,room),{
         text: userMessage,
         user: displayName,
+        time: String(Date().substr(0,21)),
         timestamp: serverTimestamp(),
         uid: uid
       })

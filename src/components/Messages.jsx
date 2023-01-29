@@ -17,7 +17,7 @@ const Messages = ({room}) => {
     })
     return () => unsubscribe()
 
-  },[])
+  },[room])
 
   return (
     <div className='messageswindow'>  
