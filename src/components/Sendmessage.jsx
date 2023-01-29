@@ -2,7 +2,7 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import React, { useState } from 'react'
 import { auth, db } from '../firebase-config'
 
-const Sendmessage = () => {
+const Sendmessage = ({room}) => {
 
   const [userMessage, setUserMessage] = useState('')
 
@@ -15,7 +15,7 @@ const Sendmessage = () => {
       }
 
       const {uid, displayName} = auth.currentUser
-      await addDoc(collection(db,'messages'),{
+      await addDoc(collection(db,room),{
         text: userMessage,
         user: displayName,
         timestamp: serverTimestamp(),

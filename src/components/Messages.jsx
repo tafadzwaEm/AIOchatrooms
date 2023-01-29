@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react'
 import { db } from '../firebase-config'
 import Message from './Message'
 
-const Messages = () => {
+const Messages = ({room}) => {
   const [messages, setMessages] = useState([])
 
   useEffect(()=>{
-    const q = query(collection(db,'messages'), orderBy('timestamp'))
+    const q = query(collection(db,room), orderBy('timestamp'))
     const unsubscribe = onSnapshot(q, (querySnapshot)=>{
       let messages = []
       querySnapshot.forEach((doc)=>{

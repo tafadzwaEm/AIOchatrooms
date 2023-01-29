@@ -10,7 +10,7 @@ const Header = ({user}) => {
 
   return (
     <div className='header'>
-        <p>ChatWithEmmanuel <br /> <span>App Version: Test 0.0.1</span> </p>
+        <p>AIO Chatrooms <br /> <span>App Version: Test 0.0.2</span> </p>
         {
           user ? <button onClick={() => auth.signOut()}>Log Out</button>:
           <SignIn />
