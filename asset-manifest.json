@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/AIOchatrooms/static/css/main.202ff549.css",
-    "main.js": "/AIOchatrooms/static/js/main.16b621aa.js",
+    "main.css": "/AIOchatrooms/static/css/main.d0af57bc.css",
+    "main.js": "/AIOchatrooms/static/js/main.ff29f920.js",
     "index.html": "/AIOchatrooms/index.html",
-    "main.202ff549.css.map": "/AIOchatrooms/static/css/main.202ff549.css.map",
-    "main.16b621aa.js.map": "/AIOchatrooms/static/js/main.16b621aa.js.map"
+    "main.d0af57bc.css.map": "/AIOchatrooms/static/css/main.d0af57bc.css.map",
+    "main.ff29f920.js.map": "/AIOchatrooms/static/js/main.ff29f920.js.map"
   },
   "entrypoints": [
-    "static/css/main.202ff549.css",
-    "static/js/main.16b621aa.js"
+    "static/css/main.d0af57bc.css",
+    "static/js/main.ff29f920.js"
   ]
 }
