@@ -22,7 +22,7 @@ const Messages = ({room}) => {
   return (
     <div className='messageswindow'>  
       {messages ? messages.map((message)=>(
-          <Message key={message.id} message={message}/>
+          <Message key={message.id} message={message} room={room} messageId={message.id}/>
         )) :
         <p>No messages yet</p>
       }                        
