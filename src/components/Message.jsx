@@ -58,13 +58,13 @@ const Message = ({message, room, messageId}) => {
                 }
 
               { message.uid === auth.currentUser.uid &&
-                    <><FaPencilAlt style={{color: 'yellow', cursor:'pointer'}} onClick={toggleForm}/>
-                    <FaTrashAlt style={{color: 'yellow', cursor:'pointer'}} onClick={()=>deleteMessage(messageId)}/> </> 
+                    <div><FaPencilAlt style={{color: 'yellow', cursor:'pointer'}} onClick={toggleForm}/>
+                    <FaTrashAlt style={{color: 'yellow', cursor:'pointer', marginLeft:'15px'}} onClick={()=>deleteMessage(messageId)}/> </div> 
               }
             </span>
             { showForm && <form onSubmit={formSubmit}>
               <input type="text" defaultValue={message.text} onChange={(e)=>setEditMessage(e.target.value)}/>
-              <button type='submit'>Edit</button>
+              <button type='submit' style={{border:'none', marginLeft:'8px', borderRadius:"5px",padding:"1px 10px"}}>Edit</button>
             </form>}
             </p>
             

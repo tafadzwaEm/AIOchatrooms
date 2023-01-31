@@ -53,7 +53,7 @@ body{
                     flex-direction: column;
                     height: 22%;
                     justify-content:space-evenly;
-                    gap: 0px;                   
+                    gap: 0px;    
                 }
                 
                 p{
@@ -63,13 +63,17 @@ body{
                     margin-top: 20px;
                     margin-left: 10px;
                     @include mobile {
-                        margin-top: 5px;
+                        margin-top: 3px;
                         margin-bottom: -8px;
                     }
 
                     span{
                         font-weight: 100;
                         font-size: 15px;
+                        @include mobile {
+                            margin-top: 0px;
+                            margin-bottom: 0px;
+                        }
                     }
                 } // end of p    
 
@@ -83,7 +87,9 @@ body{
                     color: rgb(4, 4, 31);
 
                     @include mobile {
-                        padding: 5px 10px;
+                        padding: 2px 10px;
+                        margin-top: 0px;
+                        margin-bottom: 2px;
                     }
                 }
             } // eo header
@@ -118,6 +124,7 @@ body{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                // background-color: blue;
 
                 .chatroomSelectorHeader{
                     display: flex;
@@ -138,7 +145,7 @@ body{
                     width: 60%;
                     margin-top: 10px;
                     padding: 10px;
-                    background-color: rgba(193, 240, 255, 0.616);
+                    background-color: rgb(135, 220, 248);
                     color: $baseColor;
                     font-weight: 650;
 
@@ -153,13 +160,17 @@ body{
                 height: 72%;
                 padding: 10px;
                 overflow-y: scroll;
-                background-color: rgba(164, 165, 156, 0.13);
+                // background-color: rgba(164, 165, 156, 0.13);
+                background-image: url("./static/images/chatbg.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
 
                 @include mobile {
                     height: 68%;                 
                 }
                 .message{
-                    
+                    overflow-x: hidden;
                     .received{
                         display: flex;
                         flex-direction: column;
@@ -173,7 +184,7 @@ body{
                         }
     
                         p{
-                            background-color: rgb(17, 50, 112);
+                            background-color: rgba(17, 50, 112, 0.918);
                             color: white;
                             padding: 10px;
                             border-radius: 10px 10px 10px 0px;
@@ -195,7 +206,7 @@ body{
                         flex-direction: column;
                         gap: 2px;
                         align-items:flex-end;
-                        // max-width: 80%;
+                        width: -80%;
                         
                         small{
                             font-weight: bold;
@@ -204,7 +215,7 @@ body{
                         }
     
                         p{
-                            background-color: rgb(1, 65, 4);
+                            background-color: rgba(1, 65, 4, 0.89);
                             color: white;
                             padding: 10px;
                             border-radius: 10px 10px 0px 10px;

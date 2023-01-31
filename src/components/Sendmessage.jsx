@@ -26,10 +26,18 @@ const Sendmessage = ({room}) => {
       setUserMessage('')
   }
 
+  const handleKey = (e) => {
+    if(e.code == 'Enter' && e.shiftKey){
+        return
+      }else if(e.code === 'Enter'){
+        sendmessage(e)    
+      }
+  }
+
   return (
     <div className='sendmessagewindow'>
       <form onSubmit={sendmessage}>
-        <textarea placeholder='Message' value={userMessage} onChange={(e)=>setUserMessage(e.target.value)}></textarea>
+        <textarea placeholder='Message' value={userMessage} onKeyDown={handleKey} onChange={(e)=>setUserMessage(e.target.value)}></textarea>
         <input type="submit" value="Send"/>
       </form>
     </div>
